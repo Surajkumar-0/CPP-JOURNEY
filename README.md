@@ -124,3 +124,122 @@ If the file is not present in the current directory, the compiler will generate 
 * Reuse code
 * Improve program organization
 * Access library functions
+
+## 5. Operators in C++
+
+Operators are symbols used to perform operations on variables and values.
+
+### Types of Operators
+
+#### 1. Arithmetic Operators
+
+Used for mathematical calculations.
+
+| Operator | Meaning             |
+| -------- | ------------------- |
+| +        | Addition            |
+| -        | Subtraction         |
+| *        | Multiplication      |
+| /        | Division            |
+| %        | Modulus (Remainder) |
+| ++       | Increment           |
+| --       | Decrement           |
+
+Example:
+
+```cpp
+int a = 4, b = 5;
+cout << a + b;
+```
+
+#### 2. Comparison Operators
+
+Used to compare two values.
+
+| Operator | Meaning                  |
+| -------- | ------------------------ |
+| ==       | Equal to                 |
+| !=       | Not Equal to             |
+| >        | Greater than             |
+| <        | Less than                |
+| >=       | Greater than or Equal to |
+| <=       | Less than or Equal to    |
+
+#### 3. Logical Operators
+
+Used to combine conditions.
+
+| Operator | Meaning     |   |            |
+| -------- | ----------- | - | ---------- |
+| &&       | Logical AND |   |            |
+|          |             |   | Logical OR |
+| !        | Logical NOT |   |            |
+
+### Importance
+
+* Perform calculations
+* Compare values
+* Create logical conditions
+* Control program flow
+
+## 6. Reference Variables and Type Casting
+
+### Reference Variables
+
+A reference variable is another name (alias) for an existing variable. Both variables refer to the same memory location.
+
+Example:
+
+```cpp
+float x = 455;
+float &y = x;
+```
+
+Here, `y` is a reference of `x`.
+
+### Benefits
+
+* Improves code readability
+* Avoids unnecessary copying of data
+* Useful in functions and memory management
+
+---
+
+### Type Casting
+
+Type casting is the process of converting one data type into another.
+
+Example:
+
+```cpp
+float a = 5.7;
+int b = (int)a;
+```
+
+Output:
+
+```cpp
+5
+```
+
+The decimal part is removed when converting float to int.
+
+---
+
+### Literals
+
+Literals are fixed values written directly in a program.
+
+Examples:
+
+```cpp
+34.4      // Double Literal
+34.4f     // Float Literal
+34.4L     // Long Double Literal
+```
+
+### Importance
+
+* Store values directly in code
+* Understand memory usage of different data types
+* Improve precision handling in programs
