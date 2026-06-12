@@ -243,3 +243,147 @@ Examples:
 * Store values directly in code
 * Understand memory usage of different data types
 * Improve precision handling in programs
+
+## 7. Constants and Manipulators in C++
+
+### Constants
+
+A constant is a fixed value that cannot be modified after it has been declared. Constants help make programs safer and prevent accidental changes to important values.
+
+### Syntax
+
+```cpp
+const int value = 10;
+```
+
+### Advantages
+
+* Prevents unwanted modification of data
+* Improves code readability
+* Makes programs more reliable
+
+### Example
+
+```cpp
+const int pi = 3.14;
+```
+
+---
+
+### Manipulators
+
+Manipulators are special functions used to control the formatting of input and output streams.
+
+### Common Manipulators
+
+| Manipulator    | Description                   |
+| -------------- | ----------------------------- |
+| endl           | Inserts a new line            |
+| setw()         | Sets output width             |
+| setprecision() | Controls decimal precision    |
+| fixed          | Displays fixed-point notation |
+| left           | Left aligns output            |
+| right          | Right aligns output           |
+| showpoint      | Always displays decimal point |
+
+### Example
+
+```cpp
+cout << fixed << setprecision(2) << 12.3456;
+```
+
+Output:
+
+```text
+12.35
+```
+
+### Learning Outcome
+
+After learning this topic, I can:
+
+* Create constants using the const keyword
+* Prevent modification of fixed values
+* Format program output professionally
+* Control decimal places and output width
+* Improve output readability using manipulators
+
+## 8. Operator Precedence in C++
+
+### Definition
+
+Operator precedence determines which operator is evaluated first when an expression contains multiple operators.
+
+Different operators have different priorities.
+
+### Example
+
+```cpp
+10 + 6 * 2
+```
+
+Output:
+
+```text
+22
+```
+
+Explanation:
+
+```text
+6 * 2 = 12
+10 + 12 = 22
+```
+
+Multiplication (*) has higher precedence than addition (+).
+
+---
+
+### Using Parentheses
+
+Parentheses have the highest priority and are evaluated first.
+
+Example:
+
+```cpp
+(10 + 6) * 2
+```
+
+Output:
+
+```text
+32
+```
+
+Explanation:
+
+```text
+10 + 6 = 16
+16 * 2 = 32
+```
+
+---
+
+### Importance of Operator Precedence
+
+* Prevents logical errors in programs
+* Produces correct calculations
+* Makes expressions easier to understand
+* Improves code readability
+
+### Common Priority Order
+
+1. Parentheses ()
+2. Multiplication (*), Division (/), Modulus (%)
+3. Addition (+), Subtraction (-)
+4. Relational Operators (<, >, <=, >=)
+5. Logical Operators (&&, ||)
+
+### Learning Outcome
+
+After learning this topic, I can:
+
+* Understand execution order of operators
+* Use parentheses to control evaluation order
+* Avoid unexpected results in expressions
+* Write clearer and more accurate calculations
