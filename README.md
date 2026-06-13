@@ -387,3 +387,177 @@ After learning this topic, I can:
 * Use parentheses to control evaluation order
 * Avoid unexpected results in expressions
 * Write clearer and more accurate calculations
+
+## 9. Conditional Statements (If-Else and Switch Case)
+
+Conditional statements allow a program to make decisions based on certain conditions.
+
+---
+
+### If Statement
+
+The `if` statement executes a block of code only when a condition is true.
+
+### Syntax
+
+```cpp
+if(condition)
+{
+    // code
+}
+```
+
+### Example
+
+```cpp
+if(age >= 18)
+{
+    cout << "Eligible to vote";
+}
+```
+
+---
+
+### If-Else Statement
+
+The `if-else` statement provides an alternative block of code when the condition is false.
+
+### Syntax
+
+```cpp
+if(condition)
+{
+    // code if true
+}
+else
+{
+    // code if false
+}
+```
+
+### Example
+
+```cpp
+if(age >= 18)
+{
+    cout << "You can enter";
+}
+else
+{
+    cout << "Access denied";
+}
+```
+
+---
+
+### Else-If Ladder
+
+When multiple conditions need to be checked, an else-if ladder is used.
+
+### Syntax
+
+```cpp
+if(condition1)
+{
+    // code
+}
+else if(condition2)
+{
+    // code
+}
+else
+{
+    // code
+}
+```
+
+### Example
+
+```cpp
+if(age < 18)
+{
+    cout << "Not Eligible";
+}
+else if(age == 18)
+{
+    cout << "Just Eligible";
+}
+else
+{
+    cout << "Eligible";
+}
+```
+
+---
+
+### Switch Case Statement
+
+The `switch` statement is used when a variable needs to be compared against multiple fixed values.
+
+### Syntax
+
+```cpp
+switch(variable)
+{
+    case value1:
+        // code
+        break;
+
+    case value2:
+        // code
+        break;
+
+    default:
+        // code
+}
+```
+
+### Example
+
+```cpp
+switch(age)
+{
+    case 18:
+        cout << "You are 18";
+        break;
+
+    case 22:
+        cout << "You are 22";
+        break;
+
+    default:
+        cout << "No special case";
+}
+```
+
+---
+
+### Break Statement
+
+The `break` statement terminates a case and prevents execution from continuing into the next case.
+
+### Default Case
+
+The `default` case executes when none of the cases match the given value.
+
+---
+
+### Difference Between If-Else and Switch
+
+| If-Else                       | Switch                                   |
+| ----------------------------- | ---------------------------------------- |
+| Works with complex conditions | Works with fixed values                  |
+| More flexible                 | Easier for multiple fixed choices        |
+| Can use relational operators  | Cannot use relational operators directly |
+
+---
+
+### Learning Outcome
+
+After learning this topic, I can:
+
+* Make decisions in programs using conditions
+* Use if, if-else, and else-if ladder
+* Handle multiple choices using switch-case
+* Understand the use of break and default statements
+* Build interactive programs based on user input
