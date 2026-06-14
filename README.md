@@ -561,3 +561,183 @@ After learning this topic, I can:
 * Handle multiple choices using switch-case
 * Understand the use of break and default statements
 * Build interactive programs based on user input
+
+# Chapter 10: Loops in C++
+
+Loops are used to execute a block of code repeatedly until a specified condition becomes false.
+
+## Why Loops?
+
+Without loops, we would need to write the same code multiple times. Loops make programs shorter, cleaner, and more efficient.
+
+---
+
+## Types of Loops in C++
+
+1. For Loop
+2. While Loop
+3. Do-While Loop
+
+---
+
+## 1. For Loop
+
+The `for` loop is used when the number of iterations is known in advance.
+
+### Syntax
+
+```cpp
+for(initialization; condition; update)
+{
+    // code
+}
+```
+
+### Example
+
+```cpp
+for(int i = 1; i <= 5; i++)
+{
+    cout << i << endl;
+}
+```
+
+### Working
+
+* Initialization executes once.
+* Condition is checked before each iteration.
+* Loop body executes if condition is true.
+* Update statement executes after each iteration.
+* The process repeats until the condition becomes false.
+
+---
+
+## 2. While Loop
+
+The `while` loop executes as long as the specified condition remains true.
+
+### Syntax
+
+```cpp
+while(condition)
+{
+    // code
+}
+```
+
+### Example
+
+```cpp
+int i = 1;
+
+while(i <= 5)
+{
+    cout << i << endl;
+    i++;
+}
+```
+
+### Working
+
+* Condition is checked before execution.
+* If the condition is false initially, the loop body will not execute.
+
+---
+
+## 3. Do-While Loop
+
+The `do-while` loop executes the code block first and checks the condition afterward.
+
+### Syntax
+
+```cpp
+do
+{
+    // code
+}
+while(condition);
+```
+
+### Example
+
+```cpp
+int i = 1;
+
+do
+{
+    cout << i << endl;
+    i++;
+}
+while(i <= 5);
+```
+
+### Working
+
+* Executes the loop body first.
+* Checks the condition afterward.
+* Guarantees at least one execution.
+
+---
+
+## Infinite Loop
+
+An infinite loop continues forever because its condition never becomes false.
+
+### Example
+
+```cpp
+while(true)
+{
+    cout << "Running..." << endl;
+}
+```
+
+Use carefully because the program may never stop.
+
+---
+
+## Multiplication Table Using Loop
+
+Loops can be used to generate multiplication tables efficiently.
+
+### Example
+
+```cpp
+for(int i = 1; i <= 10; i++)
+{
+    cout << "6 x " << i << " = " << 6 * i << endl;
+}
+```
+
+### Output
+
+```text
+6 x 1 = 6
+6 x 2 = 12
+6 x 3 = 18
+...
+6 x 10 = 60
+```
+
+---
+
+## Difference Between Loops
+
+| For Loop                           | While Loop                         | Do-While Loop                     |
+| ---------------------------------- | ---------------------------------- | --------------------------------- |
+| Best when iterations are known     | Best when iterations are unknown   | Executes at least once            |
+| Condition checked before execution | Condition checked before execution | Condition checked after execution |
+| Compact syntax                     | Simple syntax                      | Guaranteed first execution        |
+
+---
+
+## Learning Outcome
+
+After learning this topic, I can:
+
+* Use loops to repeat tasks efficiently.
+* Write programs using for, while, and do-while loops.
+* Understand loop initialization, condition, and update.
+* Create multiplication tables using loops.
+* Identify and avoid infinite loops.
+* Choose the appropriate loop based on the problem.
