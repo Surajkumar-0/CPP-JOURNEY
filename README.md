@@ -562,7 +562,7 @@ After learning this topic, I can:
 * Understand the use of break and default statements
 * Build interactive programs based on user input
 
-# Chapter 10: Loops in C++
+# 10: Loops in C++
 
 Loops are used to execute a block of code repeatedly until a specified condition becomes false.
 
@@ -741,3 +741,110 @@ After learning this topic, I can:
 * Create multiplication tables using loops.
 * Identify and avoid infinite loops.
 * Choose the appropriate loop based on the problem.
+
+
+# 11. Break and Continue Statements in C++
+
+The `break` and `continue` statements are used to control the flow of loops.
+
+---
+
+## Break Statement
+
+The `break` statement immediately terminates a loop or switch statement and transfers control to the next statement after the loop.
+
+### Syntax
+
+```cpp
+break;
+```
+
+### Example
+
+```cpp
+for(int i = 0; i < 5; i++)
+{
+    if(i == 2)
+    {
+        break;
+    }
+
+    cout << i << endl;
+}
+```
+
+### Output
+
+```text
+0
+1
+```
+
+### Working
+
+* Loop starts normally.
+* When `i` becomes 2, the `break` statement executes.
+* The loop stops completely.
+
+---
+
+## Continue Statement
+
+The `continue` statement skips the current iteration and moves to the next iteration of the loop.
+
+### Syntax
+
+```cpp
+continue;
+```
+
+### Example
+
+```cpp
+for(int i = 0; i < 5; i++)
+{
+    if(i == 2)
+    {
+        continue;
+    }
+
+    cout << i << endl;
+}
+```
+
+### Output
+
+```text
+0
+1
+3
+4
+```
+
+### Working
+
+* When `i` becomes 2, `continue` executes.
+* The remaining code of that iteration is skipped.
+* The loop continues with the next iteration.
+
+---
+
+## Difference Between Break and Continue
+
+| Break                                 | Continue                                           |
+| ------------------------------------- | -------------------------------------------------- |
+| Terminates the entire loop            | Skips only the current iteration                   |
+| Control exits the loop                | Control moves to the next iteration                |
+| Used when loop should stop completely | Used when a particular iteration should be ignored |
+
+---
+
+## Learning Outcome
+
+After learning this topic, I can:
+
+* Stop loop execution using `break`.
+* Skip specific iterations using `continue`.
+* Control program flow more effectively.
+* Use break and continue in loops and switch statements.
+* Understand the difference between terminating and skipping iterations.
