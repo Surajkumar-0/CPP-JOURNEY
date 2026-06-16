@@ -848,3 +848,189 @@ After learning this topic, I can:
 * Control program flow more effectively.
 * Use break and continue in loops and switch statements.
 * Understand the difference between terminating and skipping iterations.
+
+
+# 12. Pointers in C++
+
+A pointer is a special variable that stores the memory address of another variable.
+
+Pointers are one of the most important concepts in C++ and are widely used in Data Structures, Dynamic Memory Allocation, and Function Arguments.
+
+---
+
+## What is a Pointer?
+
+A pointer stores the address of a variable instead of storing the actual value.
+
+### Example
+
+```cpp
+int a = 10;
+int* ptr = &a;
+```
+
+Here:
+
+* `a` stores the value `10`
+* `&a` gives the memory address of `a`
+* `ptr` stores the address of `a`
+
+---
+
+## Address Operator (&)
+
+The `&` operator is called the Address-Of Operator.
+
+It returns the memory address of a variable.
+
+### Example
+
+```cpp
+int a = 10;
+
+cout << &a;
+```
+
+Output:
+
+```text
+Memory address of variable a
+```
+
+---
+
+## Pointer Declaration
+
+### Syntax
+
+```cpp
+data_type* pointer_name;
+```
+
+### Example
+
+```cpp
+int* ptr;
+float* p;
+char* ch;
+```
+
+---
+
+## Dereference Operator (*)
+
+The `*` operator is called the Dereference Operator.
+
+It is used to access the value stored at the address held by a pointer.
+
+### Example
+
+```cpp
+int a = 10;
+int* ptr = &a;
+
+cout << *ptr;
+```
+
+Output:
+
+```text
+10
+```
+
+---
+
+## Relationship Between Variable and Pointer
+
+```cpp
+int a = 10;
+int* ptr = &a;
+```
+
+| Expression | Meaning                   |
+| ---------- | ------------------------- |
+| a          | Value stored in variable  |
+| &a         | Address of variable       |
+| ptr        | Address stored in pointer |
+| *ptr       | Value at that address     |
+
+---
+
+## Pointer to Pointer
+
+A pointer can also store the address of another pointer.
+
+This is called a Pointer to Pointer.
+
+### Example
+
+```cpp
+int a = 10;
+
+int* ptr = &a;
+int** pptr = &ptr;
+```
+
+### Memory Representation
+
+```text
+a = 10
+
+ptr  ---->  a
+
+pptr ----> ptr ----> a
+```
+
+---
+
+## Accessing Values Using Pointer to Pointer
+
+```cpp
+cout << **pptr;
+```
+
+Output:
+
+```text
+10
+```
+
+Explanation:
+
+* `*pptr` gives `ptr`
+* `**pptr` gives the value stored in `a`
+
+---
+
+## Advantages of Pointers
+
+* Efficient memory management
+* Dynamic memory allocation
+* Useful in Data Structures
+* Passing arguments by reference
+* Faster execution in some cases
+
+---
+
+## Applications of Pointers
+
+* Arrays
+* Linked Lists
+* Stacks
+* Queues
+* Trees
+* Graphs
+* Dynamic Memory Allocation
+
+---
+
+## Learning Outcome
+
+After learning this topic, I can:
+
+* Understand memory addresses.
+* Declare and use pointers.
+* Use Address (`&`) and Dereference (`*`) operators.
+* Access values through pointers.
+* Understand Pointer to Pointer concepts.
+* Build a strong foundation for Data Structures and Algorithms.
