@@ -1034,3 +1034,190 @@ After learning this topic, I can:
 * Access values through pointers.
 * Understand Pointer to Pointer concepts.
 * Build a strong foundation for Data Structures and Algorithms.
+
+
+# 13. Arrays in C++
+
+An array is a collection of elements of the same data type stored in contiguous memory locations.
+
+Arrays help us store multiple values using a single variable name.
+
+---
+
+## What is an Array?
+
+Instead of creating multiple variables, we can store many values in a single array.
+
+### Example
+
+```cpp
+int arr[5] = {10, 20, 30, 40, 50};
+```
+
+Here:
+
+- Array name: `arr`
+- Size: `5`
+- Elements: `10, 20, 30, 40, 50`
+
+---
+
+## Array Indexing
+
+Array elements are accessed using indexes.
+
+Indexing starts from `0`.
+
+### Example
+
+```cpp
+int arr[5] = {10, 20, 30, 40, 50};
+
+cout << arr[0]; // 10
+cout << arr[1]; // 20
+```
+
+### Index Table
+
+| Index | Value |
+|---------|---------|
+| 0 | 10 |
+| 1 | 20 |
+| 2 | 30 |
+| 3 | 40 |
+| 4 | 50 |
+
+---
+
+## Traversing Array Using Loop
+
+Loops are commonly used to access all array elements.
+
+### Example
+
+```cpp
+for(int i = 0; i < 5; i++)
+{
+    cout << arr[i] << endl;
+}
+```
+
+Output:
+
+```text
+10
+20
+30
+40
+50
+```
+
+---
+
+## Array and Pointer Relationship
+
+The array name itself represents the address of its first element.
+
+### Example
+
+```cpp
+int arr[3] = {10, 20, 30};
+
+cout << arr;
+```
+
+Output:
+
+```text
+Address of first element
+```
+
+---
+
+## Accessing Elements Using Pointers
+
+### Example
+
+```cpp
+cout << *arr;
+```
+
+Output:
+
+```text
+10
+```
+
+Explanation:
+
+- `arr` → Address of first element
+- `*arr` → Value at first element
+
+---
+
+### Example
+
+```cpp
+cout << *(arr + 1);
+```
+
+Output:
+
+```text
+20
+```
+
+Explanation:
+
+- `arr + 1` moves to the next element
+- `*(arr + 1)` returns the value stored there
+
+---
+
+## Memory Representation
+
+```text
+arr
+
++----+----+----+----+----+
+| 10 | 20 | 30 | 40 | 50 |
++----+----+----+----+----+
+  ^
+  |
+arr (address of first element)
+```
+
+---
+
+## Advantages of Arrays
+
+- Store multiple values efficiently
+- Easy data management
+- Faster access using indexes
+- Useful in searching and sorting algorithms
+- Foundation of Data Structures
+
+---
+
+## Applications of Arrays
+
+- Searching Algorithms
+- Sorting Algorithms
+- Matrices
+- Strings
+- Stacks
+- Queues
+- Dynamic Programming
+
+---
+
+## Learning Outcome
+
+After learning this topic, I can:
+
+- Create and initialize arrays.
+- Access array elements using indexes.
+- Traverse arrays using loops.
+- Understand array memory storage.
+- Use pointers with arrays.
+- Build a strong foundation for DSA.
