@@ -1221,3 +1221,198 @@ After learning this topic, I can:
 - Understand array memory storage.
 - Use pointers with arrays.
 - Build a strong foundation for DSA.
+
+
+# 14. Structures, Unions and Typedef in C++
+
+Structures and Unions are user-defined data types used to store multiple values of different data types under a single name.
+
+---
+
+## Structure in C++
+
+A structure is a collection of variables of different data types grouped together.
+
+### Syntax
+
+```cpp
+struct Employee
+{
+    int eId;
+    char favChar;
+    float salary;
+};
+```
+
+### Example
+
+```cpp
+struct Employee harry;
+
+harry.eId = 1;
+harry.favChar = 'C';
+harry.salary = 120000;
+```
+
+### Accessing Structure Members
+
+```cpp
+cout << harry.eId << endl;
+cout << harry.favChar << endl;
+cout << harry.salary << endl;
+```
+
+---
+
+## Typedef in C++
+
+`typedef` is used to create an alias (shortcut name) for a data type.
+
+### Example
+
+```cpp
+typedef struct employee
+{
+    int eId;
+    char favChar;
+    float salary;
+} ep;
+```
+
+Now instead of writing:
+
+```cpp
+struct employee harry;
+```
+
+We can write:
+
+```cpp
+ep harry;
+```
+
+---
+
+## Union in C++
+
+A union is similar to a structure, but all members share the same memory location.
+
+### Syntax
+
+```cpp
+union Money
+{
+    int rice;
+    char car;
+    float pounds;
+};
+```
+
+### Example
+
+```cpp
+union Money m1;
+
+m1.rice = 34;
+cout << m1.rice;
+```
+
+---
+
+## Difference Between Structure and Union
+
+| Structure | Union |
+|------------|--------|
+| Each member gets separate memory | All members share same memory |
+| Can store all values together | Can store one value at a time |
+| Uses more memory | Uses less memory |
+| Access all members safely | Updating one member affects others |
+
+---
+
+## Memory Representation
+
+### Structure
+
+```text
++--------+
+| eId    |
++--------+
+| favChar|
++--------+
+| salary |
++--------+
+```
+
+Each member has its own memory.
+
+---
+
+### Union
+
+```text
++--------+
+| Shared |
+| Memory |
++--------+
+```
+
+All members use the same memory location.
+
+---
+
+## When to Use Structure?
+
+- Student Records
+- Employee Information
+- Library Management
+- College Database
+- Real-world Objects
+
+### Example
+
+```cpp
+struct Student
+{
+    int rollNo;
+    char grade;
+    float marks;
+};
+```
+
+---
+
+## When to Use Union?
+
+- Memory optimization
+- Embedded Systems
+- Hardware Programming
+- Situations where only one value is needed at a time
+
+---
+
+## Advantages
+
+### Structure
+
+- Stores multiple related values.
+- Easy data organization.
+- Real-world modeling.
+
+### Union
+
+- Saves memory.
+- Efficient for low-memory systems.
+
+---
+
+## Learning Outcome
+
+After learning this topic, I can:
+
+- Create structures.
+- Access structure members.
+- Use typedef to simplify code.
+- Create unions.
+- Understand memory differences between structure and union.
+- Choose the right data type according to requirements.
