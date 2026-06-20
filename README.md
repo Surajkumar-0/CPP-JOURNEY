@@ -1416,3 +1416,167 @@ After learning this topic, I can:
 - Create unions.
 - Understand memory differences between structure and union.
 - Choose the right data type according to requirements.
+
+# 15 - Function Prototypes
+
+This chapter introduces Function Prototypes in C++. Function prototypes inform the compiler about a function before it is used.
+
+---
+
+## Topics Covered
+
+### 1. Function Prototype
+
+A function prototype declares a function before its actual definition.
+
+Syntax:
+
+```cpp
+return_type function_name(parameters);
+```
+
+Example:
+
+```cpp
+int sum(int, int);
+void greet();
+```
+
+---
+
+### 2. Function Declaration
+
+The compiler gets information about:
+
+- Function name
+- Return type
+- Number of parameters
+- Parameter data types
+
+Example:
+
+```cpp
+int sum(int, int);
+```
+
+---
+
+### 3. Function Definition
+
+The actual implementation of a function.
+
+Example:
+
+```cpp
+int sum(int a, int b)
+{
+    return a + b;
+}
+```
+
+---
+
+### 4. Function Call
+
+Functions are called from the main function.
+
+Example:
+
+```cpp
+sum(num1, num2);
+greet();
+```
+
+---
+
+### 5. Actual Parameters
+
+Values passed during function call.
+
+Example:
+
+```cpp
+sum(num1, num2);
+```
+
+Here:
+
+- num1
+- num2
+
+are Actual Parameters.
+
+---
+
+### 6. Formal Parameters
+
+Variables used in function definition to receive values.
+
+Example:
+
+```cpp
+int sum(int a, int b)
+```
+
+Here:
+
+- a
+- b
+
+are Formal Parameters.
+
+---
+
+### 7. Return Type Function
+
+Returns a value to the caller.
+
+Example:
+
+```cpp
+int sum(int a, int b)
+{
+    return a + b;
+}
+```
+
+---
+
+### 8. Void Function
+
+Does not return any value.
+
+Example:
+
+```cpp
+void greet()
+{
+    cout << "Hello, Good Morning";
+}
+```
+
+---
+
+## Key Concepts Practiced
+
+- Function Prototype
+- Function Declaration
+- Function Definition
+- Function Call
+- Actual Parameters
+- Formal Parameters
+- Return Values
+- Void Functions
+
+---
+
+## Learning Outcome
+
+After completing this chapter, I can:
+
+- Declare functions using prototypes.
+- Define and call functions.
+- Understand actual and formal parameters.
+- Create functions that return values.
+- Create void functions.
+- Improve program organization using functions.
