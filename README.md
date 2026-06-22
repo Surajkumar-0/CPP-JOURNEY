@@ -1580,3 +1580,110 @@ After completing this chapter, I can:
 - Create functions that return values.
 - Create void functions.
 - Improve program organization using functions.
+
+
+# 16 . Call by Value & Call by Reference in C++.
+
+This program demonstrates different ways of passing arguments to functions in C++.
+
+## Topics Covered
+
+### 1. Call by Value
+
+In call by value, copies of variables are passed to the function.
+
+```cpp
+void swap(int a, int b);
+```
+
+Changes made inside the function do not affect the original variables.
+
+#### Example
+
+Before Swap:
+
+x = 4, y = 5
+
+After Swap:
+
+x = 4, y = 5
+
+---
+
+### 2. Call by Reference using Pointers
+
+In this method, addresses of variables are passed to the function.
+
+```cpp
+void swapPointer(int* a, int* b);
+```
+
+Changes made inside the function affect the original variables.
+
+#### Example
+
+Before Swap:
+
+x = 4, y = 5
+
+After Swap:
+
+x = 5, y = 4
+
+---
+
+### 3. Call by Reference using Reference Variables
+
+C++ provides reference variables using the `&` operator.
+
+```cpp
+void swapReferenceVar(int &a, int &b);
+```
+
+Reference variables act as aliases of original variables.
+
+#### Example
+
+Before Swap:
+
+x = 4, y = 5
+
+After Swap:
+
+x = 5, y = 4
+
+---
+
+## Concepts Learned
+
+- Function Arguments
+- Actual Parameters
+- Formal Parameters
+- Call by Value
+- Call by Reference
+- Pointers
+- Reference Variables
+- Swapping Values
+
+---
+
+## Key Difference
+
+| Call by Value | Call by Reference |
+|--------------|------------------|
+| Copy of variable is passed | Original variable is passed |
+| Original value does not change | Original value changes |
+| Extra memory required | Memory efficient |
+| Safer | Faster for large data |
+
+---
+
+## Learning Outcome
+
+After completing this program, I can:
+
+- Understand function parameter passing.
+- Differentiate between call by value and call by reference.
+- Use pointers for reference passing.
+- Use C++ reference variables.
+- Swap values efficiently in C++.
