@@ -1687,3 +1687,283 @@ After completing this program, I can:
 - Use pointers for reference passing.
 - Use C++ reference variables.
 - Swap values efficiently in C++.
+
+
+# 17. Inline Functions, Default Arguments and Constant Arguments in C++
+
+These features help make functions more efficient, flexible, and secure.
+
+---
+
+## Inline Functions
+
+An inline function requests the compiler to replace the function call with the actual function code, reducing function call overhead.
+
+### Syntax
+
+```cpp
+inline return_type function_name(parameters)
+{
+    // code
+}
+```
+
+### Example
+
+```cpp
+inline int product(int a, int b)
+{
+    return a * b;
+}
+```
+
+### Benefits
+
+* Faster execution for small functions.
+* Reduces function call overhead.
+* Improves performance.
+
+---
+
+## Default Arguments
+
+Default arguments allow a function parameter to have a predefined value.
+
+### Syntax
+
+```cpp
+return_type function_name(type parameter = value);
+```
+
+### Example
+
+```cpp
+float moneyReceived(int currentMoney, float factor = 1.04)
+{
+    return currentMoney * factor;
+}
+```
+
+### Working
+
+* If the second argument is not provided, the default value is used.
+* If provided, the supplied value overrides the default value.
+
+---
+
+## Constant Arguments
+
+The `const` keyword prevents modification of function parameters.
+
+### Syntax
+
+```cpp
+int strlen(const char *p);
+```
+
+### Benefits
+
+* Protects data from accidental changes.
+* Improves program safety.
+* Makes code easier to understand.
+
+---
+
+## Learning Outcome
+
+After learning this topic, I can:
+
+* Create and use inline functions.
+* Use default arguments in functions.
+* Protect function parameters using const.
+* Improve program efficiency and safety.
+* Write cleaner and more flexible functions.
+
+
+# 18. Recursion and Recursive Functions in C++
+
+Recursion is a programming technique where a function calls itself to solve smaller versions of a problem.
+
+---
+
+## Recursion
+
+A recursive function repeatedly calls itself until a base condition is reached.
+
+### Syntax
+
+```cpp
+return_type function_name(parameters)
+{
+    if(base_condition)
+        return value;
+
+    return function_name(smaller_problem);
+}
+```
+
+---
+
+## Base Case
+
+The condition that stops recursion.
+
+### Example
+
+```cpp
+if(n <= 1)
+{
+    return 1;
+}
+```
+
+### Importance
+
+* Prevents infinite recursion.
+* Terminates function calls.
+* Returns the final result.
+
+---
+
+## Recursive Factorial Function
+
+Factorial of a number:
+
+```text
+n! = n × (n-1)!
+```
+
+### Example
+
+```cpp
+int factorial(int n)
+{
+    if(n <= 1)
+    {
+        return 1;
+    }
+
+    return n * factorial(n - 1);
+}
+```
+
+---
+
+## Recursive Fibonacci Function
+
+Fibonacci sequence:
+
+```text
+1, 1, 2, 3, 5, 8, 13...
+```
+
+### Example
+
+```cpp
+int fib(int n)
+{
+    if(n < 2)
+    {
+        return 1;
+    }
+
+    return fib(n - 1) + fib(n - 2);
+}
+```
+
+---
+
+## Advantages of Recursion
+
+* Simplifies complex problems.
+* Produces cleaner code.
+* Useful for mathematical calculations and tree structures.
+
+---
+
+## Learning Outcome
+
+After learning this topic, I can:
+
+* Understand recursion and recursive calls.
+* Create recursive functions.
+* Implement factorial using recursion.
+* Implement Fibonacci series using recursion.
+* Use base cases to control recursive execution.
+
+
+# 19. Function Overloading in C++
+
+Function overloading allows multiple functions to have the same name but different parameter lists.
+
+---
+
+## Function Overloading
+
+Functions can share the same name if their parameters differ in:
+
+* Number of parameters
+* Data types of parameters
+* Order of parameters
+
+---
+
+## Example
+
+```cpp
+int sum(int a, int b)
+{
+    return a + b;
+}
+
+int sum(int a, int b, int c)
+{
+    return a + b + c;
+}
+```
+
+### Working
+
+* Compiler identifies the correct function based on arguments passed.
+* This process occurs during compile time.
+
+---
+
+## Function Overloading for Different Shapes
+
+Function overloading can be used to calculate values for different objects using the same function name.
+
+### Examples
+
+* Volume of a Cube
+* Volume of a Cylinder
+* Volume of a Cuboid
+
+Using the same function name:
+
+```cpp
+volume(...)
+```
+
+with different parameter lists.
+
+---
+
+## Advantages of Function Overloading
+
+* Improves code readability.
+* Reduces the need for multiple function names.
+* Supports code reusability.
+* Makes programs easier to maintain.
+
+---
+
+## Learning Outcome
+
+After learning this topic, I can:
+
+* Create overloaded functions.
+* Use the same function name for different tasks.
+* Understand compile-time polymorphism.
+* Improve code reusability and readability.
+* Apply function overloading in practical programs.
