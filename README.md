@@ -1967,3 +1967,229 @@ After learning this topic, I can:
 * Understand compile-time polymorphism.
 * Improve code reusability and readability.
 * Apply function overloading in practical programs.
+
+# 20. Object Oriented Programming (OOP) in C++
+
+## Introduction
+
+Object-Oriented Programming (OOP) is a programming paradigm that organizes software design around **objects** rather than functions and logic. It combines data and functions into a single unit called an object.
+
+C++ was developed by adding Object-Oriented Programming features to the C language to overcome the limitations of Procedural Programming.
+
+---
+
+## Why OOP?
+
+As programs become larger, Procedural Programming faces several challenges:
+
+* Reduced readability
+* Difficult maintenance
+* Increased bugs and errors
+* Poor data security
+* Low code reusability
+
+Object-Oriented Programming solves these problems by modeling programs using real-world objects and classes.
+
+---
+
+## Procedure Oriented Programming (POP)
+
+### Features
+
+* Focuses on functions
+* Uses top-down approach
+* Data moves freely between functions
+* Less secure
+* Difficult to manage large programs
+
+### Example
+
+C Language is a Procedural Programming Language.
+
+---
+
+## Object-Oriented Programming (OOP)
+
+### Features
+
+* Focuses on objects and classes
+* Uses bottom-up approach
+* Data is protected inside objects
+* More secure
+* Easy to manage large programs
+* Supports code reusability
+
+### Example
+
+C++ is an Object-Oriented Programming Language.
+
+---
+
+## Difference Between POP and OOP
+
+| POP                          | OOP                     |
+| ---------------------------- | ----------------------- |
+| Focuses on functions         | Focuses on objects      |
+| Uses top-down approach       | Uses bottom-up approach |
+| Less secure                  | More secure             |
+| Data moves freely            | Data is protected       |
+| Difficult for large programs | Easy for large programs |
+| Low code reusability         | High code reusability   |
+
+---
+
+# Basic Concepts of OOP
+
+## 1. Class
+
+A class is a user-defined data type that acts as a blueprint for creating objects.
+
+### Example
+
+```cpp
+class Student
+{
+};
+```
+
+---
+
+## 2. Object
+
+An object is an instance of a class.
+
+### Example
+
+```cpp
+Student s1;
+```
+
+---
+
+## 3. Encapsulation
+
+Encapsulation is the process of wrapping data and functions into a single unit.
+
+### Example
+
+```cpp
+class Student
+{
+    int rollNo;
+    void display();
+};
+```
+
+---
+
+## 4. Data Abstraction
+
+Abstraction means showing only essential information and hiding implementation details.
+
+---
+
+## 5. Data Hiding
+
+Data Hiding restricts direct access to data using access specifiers such as `private`.
+
+### Example
+
+```cpp
+private:
+    int salary;
+```
+
+---
+
+## 6. Inheritance
+
+Inheritance is the process by which one class acquires the properties and behavior of another class.
+
+### Example
+
+```text
+Animal
+   ↓
+Dog
+```
+
+---
+
+## 7. Polymorphism
+
+Polymorphism is the ability of a function or object to take multiple forms.
+
+### Example
+
+```cpp
+sum(int, int);
+sum(float, float);
+```
+
+(Function Overloading)
+
+---
+
+## 8. Dynamic Binding
+
+Dynamic Binding means the function to be executed is determined at runtime.
+
+---
+
+## 9. Message Passing
+
+Objects communicate with each other by sending and receiving messages.
+
+---
+
+# Benefits of OOP
+
+* Code Reusability
+* Data Security
+* Easy Maintenance
+* Better Program Structure
+* Reduced Software Complexity
+* Real-World Modeling
+* Faster Development Process
+
+---
+
+# Advantages of OOP
+
+1. Improves software quality.
+2. Increases code reusability.
+3. Provides better data security.
+4. Makes debugging easier.
+5. Simplifies maintenance of large programs.
+
+---
+
+# Limitations of OOP
+
+1. More complex than procedural programming.
+2. Requires proper planning and design.
+3. Uses more memory in some cases.
+
+---
+
+# Key Points
+
+* OOP stands for Object-Oriented Programming.
+* C++ supports OOP concepts.
+* OOP is based on classes and objects.
+* Main concepts of OOP are:
+
+  * Class
+  * Object
+  * Encapsulation
+  * Abstraction
+  * Inheritance
+  * Polymorphism
+  * Dynamic Binding
+  * Message Passing
+
+---
+
+# Conclusion
+
+Object-Oriented Programming is a powerful programming paradigm that improves code organization, security, reusability, and maintainability. It is widely used in modern software development and forms the foundation of C++ programming.
