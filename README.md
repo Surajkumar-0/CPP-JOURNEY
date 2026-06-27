@@ -2193,3 +2193,289 @@ Objects communicate with each other by sending and receiving messages.
 # Conclusion
 
 Object-Oriented Programming is a powerful programming paradigm that improves code organization, security, reusability, and maintainability. It is widely used in modern software development and forms the foundation of C++ programming.
+
+
+# 21. Classes, Public and Private Access Modifiers in C++
+
+## Introduction
+
+A class is a user-defined data type in C++ that acts as a blueprint for creating objects. It contains data members (variables) and member functions (methods).
+
+Classes are one of the fundamental concepts of Object-Oriented Programming (OOP).
+
+---
+
+# Class
+
+## Definition
+
+A class is a blueprint or template used to create objects.
+
+It groups data members and member functions into a single unit.
+
+## Syntax
+
+```cpp
+class ClassName
+{
+    // Data Members
+
+    // Member Functions
+};
+```
+
+## Example
+
+```cpp
+class Employee
+{
+    int id;
+    string name;
+};
+```
+
+---
+
+# Object
+
+## Definition
+
+An object is an instance of a class.
+
+Objects are used to access the members of a class.
+
+## Example
+
+```cpp
+Employee emp1;
+```
+
+Here:
+
+* `Employee` → Class
+* `emp1` → Object
+
+---
+
+# Access Modifiers in C++
+
+Access Modifiers control the accessibility of class members.
+
+### Types of Access Modifiers
+
+1. Public
+2. Private
+3. Protected
+
+---
+
+# Public Access Modifier
+
+## Definition
+
+Members declared as `public` can be accessed from anywhere in the program.
+
+## Example
+
+```cpp
+class Employee
+{
+public:
+    int salary;
+};
+```
+
+Usage:
+
+```cpp
+Employee e1;
+e1.salary = 50000;
+```
+
+---
+
+# Private Access Modifier
+
+## Definition
+
+Members declared as `private` can only be accessed within the class.
+
+They cannot be accessed directly through objects.
+
+## Example
+
+```cpp
+class Employee
+{
+private:
+    int id;
+};
+```
+
+Invalid Access:
+
+```cpp
+Employee e1;
+e1.id = 10;   // Error
+```
+
+---
+
+# Member Functions
+
+## Definition
+
+Functions declared inside a class are called member functions.
+
+They are used to access and manipulate private data members.
+
+## Example
+
+```cpp
+class Employee
+{
+private:
+    int id;
+
+public:
+    void setId(int i)
+    {
+        id = i;
+    }
+};
+```
+
+---
+
+# Scope Resolution Operator (::)
+
+## Definition
+
+The Scope Resolution Operator (`::`) is used to define member functions outside the class.
+
+## Example
+
+```cpp
+class Employee
+{
+public:
+    void display();
+};
+
+void Employee :: display()
+{
+    cout << "Hello";
+}
+```
+
+---
+
+# Example Program
+
+```cpp
+#include<iostream>
+using namespace std;
+
+class Employee
+{
+private:
+    int a, b, c;
+
+public:
+    int d, e;
+
+    void setData(int a1, int b1, int c1);
+    void getData();
+};
+
+void Employee :: setData(int a1, int b1, int c1)
+{
+    a = a1;
+    b = b1;
+    c = c1;
+}
+
+void Employee :: getData()
+{
+    cout << a << endl;
+    cout << b << endl;
+    cout << c << endl;
+    cout << d << endl;
+    cout << e << endl;
+}
+```
+
+---
+
+# Difference Between Public and Private
+
+| Public                       | Private                          |
+| ---------------------------- | -------------------------------- |
+| Accessible outside the class | Not accessible outside the class |
+| Less secure                  | More secure                      |
+| Used for interface           | Used for data protection         |
+
+---
+
+# Advantages of Private Members
+
+* Provides Data Hiding
+* Improves Security
+* Prevents Unauthorized Access
+* Supports Encapsulation
+
+---
+
+# Advantages of Classes
+
+* Organizes data and functions together
+* Improves code readability
+* Supports Object-Oriented Programming
+* Provides data security
+* Makes code reusable
+
+---
+
+# Key Points
+
+* A class is a blueprint for creating objects.
+* An object is an instance of a class.
+* Public members can be accessed from outside the class.
+* Private members cannot be accessed directly.
+* Member functions are used to access private data.
+* Scope Resolution Operator (`::`) defines functions outside the class.
+
+---
+
+# Short Definitions
+
+### Class
+
+A class is a blueprint for creating objects.
+
+### Object
+
+An object is an instance of a class.
+
+### Public Access Modifier
+
+Allows members to be accessed from anywhere in the program.
+
+### Private Access Modifier
+
+Restricts access to members outside the class.
+
+### Scope Resolution Operator
+
+The `::` operator is used to define member functions outside the class.
+
+### Data Hiding
+
+The process of restricting direct access to data members.
+
+---
+
+# Conclusion
+
+Classes and Access Modifiers are the foundation of Object-Oriented Programming in C++. Public members provide accessibility, while private members provide security through data hiding and encapsulation.
+
