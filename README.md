@@ -2479,3 +2479,195 @@ The process of restricting direct access to data members.
 
 Classes and Access Modifiers are the foundation of Object-Oriented Programming in C++. Public members provide accessibility, while private members provide security through data hiding and encapsulation.
 
+
+# 22. Nesting of Member Functions in C++
+
+## Introduction
+
+In C++, a member function of a class can call another member function of the same class. This feature is known as **Nesting of Member Functions**.
+
+Nesting improves code organization, security, and reusability by allowing functions within a class to work together.
+
+---
+
+# What is Nesting of Member Functions?
+
+**Definition:**
+
+Nesting of Member Functions is a feature in which one member function calls another member function of the same class.
+
+---
+
+# Syntax
+
+```cpp
+class ClassName
+{
+private:
+    void function1();
+
+public:
+    void function2()
+    {
+        function1();      // Nested Member Function Call
+    }
+};
+```
+
+---
+
+# Example
+
+```cpp
+#include<iostream>
+using namespace std;
+
+class Binary
+{
+private:
+    string s;
+
+    void checkBinary()
+    {
+        cout << "Checking Binary Number..." << endl;
+    }
+
+public:
+    void display()
+    {
+        checkBinary();      // Nested Member Function
+        cout << "Displaying Binary Number";
+    }
+};
+
+int main()
+{
+    Binary b;
+    b.display();
+
+    return 0;
+}
+```
+
+---
+
+# Working
+
+1. An object of the class is created.
+2. A public member function is called.
+3. That member function internally calls another member function of the same class.
+4. The second member function performs its task and returns control.
+5. The first function continues its execution.
+
+---
+
+# Example from Binary Program
+
+```cpp
+void Binary::ones_compliment()
+{
+    checkBinary();      // Nested Member Function
+
+    // Remaining Code
+}
+```
+
+Here:
+
+* `ones_compliment()` is a public member function.
+* `checkBinary()` is a private member function.
+* `ones_compliment()` calls `checkBinary()`.
+* This is called **Nesting of Member Functions**.
+
+---
+
+# Why Do We Use Nesting?
+
+Nesting of Member Functions is used to:
+
+* Validate data before processing.
+* Improve code reusability.
+* Avoid duplicate code.
+* Hide internal functions from users.
+* Increase program security.
+
+---
+
+# Advantages
+
+* Improves code organization.
+* Increases code reusability.
+* Supports data hiding.
+* Prevents direct access to private member functions.
+* Makes programs easier to maintain.
+
+---
+
+# Important Points
+
+* One member function can call another member function of the same class.
+* Private member functions cannot be accessed directly through objects.
+* Private member functions can be called by other member functions of the same class.
+* No object name is required when calling another member function inside the same class.
+
+---
+
+# Real-Life Example
+
+Consider an ATM system:
+
+```text
+Withdraw Money()
+        │
+        ▼
+Verify PIN()
+        │
+        ▼
+Check Balance()
+        │
+        ▼
+Withdraw Cash
+```
+
+Each function calls another function internally. This is similar to **Nesting of Member Functions**.
+
+---
+
+# Difference Between Normal Function Call and Nested Member Function
+
+| Normal Function Call                         | Nested Member Function                            |
+| -------------------------------------------- | ------------------------------------------------- |
+| Can belong to different classes or functions | Functions belong to the same class                |
+| May require an object                        | No object is needed inside the class              |
+| General function calling                     | One member function calls another member function |
+
+---
+
+# Key Points
+
+* Nesting is the process of calling one member function from another member function.
+* It improves encapsulation and program security.
+* Private functions remain hidden from users.
+* Commonly used in Object-Oriented Programming.
+
+---
+
+# Short Definitions
+
+### Nesting of Member Functions
+
+Nesting of Member Functions is the process in which one member function calls another member function of the same class.
+
+### Member Function
+
+A function declared inside a class is called a member function.
+
+### Private Member Function
+
+A private member function can only be accessed within the same class.
+
+---
+
+# Conclusion
+
+Nesting of Member Functions is an important feature of Object-Oriented Programming in C++. It allows one member function to call another member function of the same class, improving code organization, security, and reusability. It is commonly used to perform validation or helper operations before executing the main task.
