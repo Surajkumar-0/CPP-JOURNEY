@@ -2671,3 +2671,277 @@ A private member function can only be accessed within the same class.
 # Conclusion
 
 Nesting of Member Functions is an important feature of Object-Oriented Programming in C++. It allows one member function to call another member function of the same class, improving code organization, security, and reusability. It is commonly used to perform validation or helper operations before executing the main task.
+# Objects Memory Allocation & Using Arrays in Classes in C++
+
+## Introduction
+
+In C++, memory allocation for **data members** and **member functions** is different.
+
+Memory for data members is allocated only when an object of the class is created, whereas member functions have only one shared copy that is used by all objects.
+
+Arrays can also be declared inside a class to store multiple values of the same data type efficiently.
+
+---
+
+# Objects Memory Allocation
+
+## Definition
+
+Memory is allocated to the data members of a class only when an object is created.
+
+Each object has its own copy of data members, while all objects share a single copy of the member functions.
+
+---
+
+## Memory Allocation Process
+
+### Data Members
+
+- Memory is allocated when an object is created.
+- Every object has its own copy of data members.
+- Different objects can store different values.
+
+### Member Functions
+
+- Memory is allocated only once.
+- All objects share the same copy of member functions.
+- This reduces memory usage.
+
+---
+
+## Example
+
+```cpp
+class Employee
+{
+    int id;
+    int salary;
+
+public:
+    void display();
+};
+
+Employee emp1;
+Employee emp2;
+```
+
+### Memory Representation
+
+```
+emp1
+ ├── id
+ └── salary
+
+emp2
+ ├── id
+ └── salary
+
+display()
+(Only One Shared Copy)
+```
+
+---
+
+# Arrays in Classes
+
+## Definition
+
+Arrays in classes are used to store multiple values of the same data type inside a class.
+
+Instead of creating many variables, an array stores multiple values using a single name.
+
+---
+
+## Example
+
+```cpp
+class Shop
+{
+    int itemId[100];
+    int itemPrice[100];
+    int counter;
+
+public:
+    void initCounter();
+    void setPrice();
+    void displayPrice();
+};
+```
+
+---
+
+# Data Members
+
+### itemId[100]
+
+Stores the IDs of up to 100 items.
+
+### itemPrice[100]
+
+Stores the prices of up to 100 items.
+
+### counter
+
+Keeps track of the number of items entered.
+
+---
+
+# Member Functions
+
+## initCounter()
+
+Initializes the counter to zero.
+
+```cpp
+counter = 0;
+```
+
+---
+
+## setPrice()
+
+- Takes item ID as input.
+- Takes item price as input.
+- Stores values in arrays.
+- Increments the counter after each entry.
+
+---
+
+## displayPrice()
+
+- Displays all stored item IDs.
+- Displays all stored item prices.
+- Uses a loop to print the data.
+
+---
+
+# Program Workflow
+
+1. Create an object of the `Shop` class.
+2. Initialize the counter.
+3. Enter item IDs and prices.
+4. Store the values in arrays.
+5. Display all stored data.
+
+---
+
+# Example
+
+### Input
+
+```
+Item ID : 101
+Price   : 500
+
+Item ID : 102
+Price   : 700
+
+Item ID : 103
+Price   : 900
+```
+
+### Output
+
+```
+The Price of item with Id 101 is 500
+The Price of item with Id 102 is 700
+The Price of item with Id 103 is 900
+```
+
+---
+
+# Advantages of Objects Memory Allocation
+
+- Every object stores its own data.
+- Member functions are shared by all objects.
+- Saves memory.
+- Improves memory efficiency.
+
+---
+
+# Advantages of Arrays in Classes
+
+- Stores multiple values efficiently.
+- Reduces the number of variables.
+- Makes data management easier.
+- Simplifies looping operations.
+
+---
+
+# Difference Between Data Members and Member Functions
+
+| Data Members | Member Functions |
+|--------------|------------------|
+| Each object has its own copy | Only one copy is shared |
+| Memory allocated when object is created | Memory allocated only once |
+| Stores object data | Performs operations on data |
+
+---
+
+# Key Points
+
+- A class is only a blueprint.
+- Memory is allocated only when an object is created.
+- Every object has its own copy of data members.
+- Member functions are shared among all objects.
+- Arrays store multiple values of the same data type.
+- Arrays help organize and manage data efficiently.
+- The `counter` variable keeps track of the number of stored items.
+
+---
+
+# Short Definitions
+
+### Object Memory Allocation
+
+Memory is allocated to data members only when an object is created. Each object has its own copy of data members, while member functions are shared.
+
+### Arrays in Classes
+
+Arrays in classes are used to store multiple values of the same data type as class members.
+
+### Data Members
+
+Variables declared inside a class are called data members.
+
+### Member Functions
+
+Functions declared inside a class are called member functions.
+
+---
+
+# Viva Questions
+
+### What is Object Memory Allocation?
+
+Object Memory Allocation means memory is allocated to the data members only when an object is created.
+
+---
+
+### When is memory allocated to data members?
+
+Memory is allocated during object creation.
+
+---
+
+### How many copies of member functions exist?
+
+Only one copy of member functions exists, and it is shared by all objects.
+
+---
+
+### Why are arrays used in classes?
+
+Arrays are used to store multiple values of the same data type efficiently.
+
+---
+
+### What is the purpose of the `counter` variable?
+
+The `counter` variable keeps track of the number of items stored in the arrays.
+
+---
+
+# Conclusion
+
+Object Memory Allocation ensures that every object has its own copy of data members while sharing a single copy of member functions. Arrays in Classes provide an efficient way to store and manage multiple values within a class, making programs more organized, memory-efficient, and easier to maintain.
