@@ -2671,7 +2671,9 @@ A private member function can only be accessed within the same class.
 # Conclusion
 
 Nesting of Member Functions is an important feature of Object-Oriented Programming in C++. It allows one member function to call another member function of the same class, improving code organization, security, and reusability. It is commonly used to perform validation or helper operations before executing the main task.
-# Objects Memory Allocation & Using Arrays in Classes in C++
+
+
+# 23.Objects Memory Allocation & Using Arrays in Classes in C++
 
 ## Introduction
 
