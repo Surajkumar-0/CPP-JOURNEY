@@ -2947,3 +2947,275 @@ The `counter` variable keeps track of the number of items stored in the arrays.
 # Conclusion
 
 Object Memory Allocation ensures that every object has its own copy of data members while sharing a single copy of member functions. Arrays in Classes provide an efficient way to store and manage multiple values within a class, making programs more organized, memory-efficient, and easier to maintain.
+
+
+# 24. Static Data Members & Static Member Functions in C++
+
+## Introduction
+
+In C++, the `static` keyword is used to create class members that belong to the **class** instead of individual objects.
+
+A static data member is shared among all objects of the class, and a static member function can access only static members.
+
+---
+
+# Static Data Member
+
+## Definition
+
+A **Static Data Member** is a variable that belongs to the class rather than any individual object.
+
+Only **one copy** of the static data member exists, and it is shared by all objects of the class.
+
+---
+
+## Syntax
+
+```cpp
+class Employee
+{
+    static int count;
+};
+```
+
+The static data member must be defined outside the class.
+
+```cpp
+int Employee::count = 0;
+```
+
+---
+
+# Characteristics of Static Data Members
+
+- Belongs to the class, not to individual objects.
+- Only one copy exists.
+- Shared by all objects.
+- Memory is allocated only once.
+- Default value is `0`.
+- Declared inside the class and defined outside the class.
+
+---
+
+# Example
+
+```cpp
+class Employee
+{
+private:
+    int id;
+    static int count;
+
+public:
+    void setData();
+    void getData();
+};
+```
+
+If three objects are created:
+
+```cpp
+Employee emp1, emp2, emp3;
+```
+
+Memory Representation
+
+```
+emp1
+ └── id
+
+emp2
+ └── id
+
+emp3
+ └── id
+
+count
+(One Shared Copy)
+```
+
+---
+
+# Static Member Function
+
+## Definition
+
+A **Static Member Function** is a member function that belongs to the class instead of any object.
+
+It can access only static data members and other static member functions.
+
+---
+
+## Syntax
+
+```cpp
+class Employee
+{
+public:
+    static void getCount();
+};
+```
+
+---
+
+# Calling a Static Member Function
+
+Static member functions are called using the **class name** and the **Scope Resolution Operator (`::`)**.
+
+```cpp
+Employee::getCount();
+```
+
+No object is required.
+
+---
+
+# Rules of Static Member Functions
+
+- Can access only static data members.
+- Can call only static member functions.
+- Cannot directly access non-static data members.
+- Can be called without creating an object.
+- Belongs to the class rather than individual objects.
+
+---
+
+# Example
+
+```cpp
+class Employee
+{
+private:
+    static int count;
+
+public:
+    static void getCount()
+    {
+        cout << count;
+    }
+};
+```
+
+---
+
+# Difference Between Normal and Static Data Members
+
+| Normal Data Member | Static Data Member |
+|--------------------|--------------------|
+| Each object has its own copy | Only one shared copy |
+| Belongs to an object | Belongs to the class |
+| Memory allocated for every object | Memory allocated only once |
+| Stores object-specific data | Stores class-level data |
+
+---
+
+# Difference Between Normal and Static Member Functions
+
+| Normal Member Function | Static Member Function |
+|------------------------|------------------------|
+| Called using an object | Called using the class name |
+| Can access all members | Can access only static members |
+| Depends on objects | Independent of objects |
+
+---
+
+# Advantages of Static Data Members
+
+- Saves memory.
+- Shared by all objects.
+- Useful for counting objects.
+- Stores common information.
+- Improves memory efficiency.
+
+---
+
+# Advantages of Static Member Functions
+
+- Can be called without creating objects.
+- Accesses shared class data.
+- Improves program organization.
+- Useful for utility functions.
+
+---
+
+# Applications
+
+Static members are commonly used for:
+
+- Counting the number of objects.
+- Maintaining total employees or students.
+- Tracking shared information.
+- Storing class-wide settings.
+
+---
+
+# Key Points
+
+- Static data members belong to the class.
+- Only one copy of a static variable exists.
+- Static member functions belong to the class.
+- Static functions are called using the class name.
+- Static member functions can access only static members.
+- Static data members are defined outside the class using the Scope Resolution Operator (`::`).
+
+---
+
+# Short Definitions
+
+### Static Data Member
+
+A static data member is a variable that belongs to the class and is shared by all objects of the class.
+
+### Static Member Function
+
+A static member function is a function that belongs to the class and can access only static members.
+
+### Scope Resolution Operator (`::`)
+
+The Scope Resolution Operator (`::`) is used to define static data members outside the class and to call static member functions.
+
+---
+
+# Viva Questions
+
+### What is a Static Data Member?
+
+A static data member is shared by all objects of a class and has only one copy.
+
+---
+
+### How many copies of a static data member exist?
+
+Only one copy exists for the entire class.
+
+---
+
+### Can a static member function access non-static variables?
+
+No. It can access only static data members and other static member functions.
+
+---
+
+### How do you call a static member function?
+
+Using the class name and the Scope Resolution Operator.
+
+```cpp
+Employee::getCount();
+```
+
+---
+
+### Where is a static data member defined?
+
+A static data member is declared inside the class and defined outside the class.
+
+```cpp
+int Employee::count = 0;
+```
+
+---
+
+# Conclusion
+
+Static Data Members and Static Member Functions are important features of Object-Oriented Programming in C++. Static members belong to the class rather than individual objects, making them ideal for storing shared data and performing class-level operations. They improve memory efficiency, reduce duplication, and provide better organization in C++ programs.
